@@ -4,7 +4,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <h1>Web Store</h1>
+      <h1 className="text-3xl font-bold underline">Web Store</h1>
       <p>Welcome to the Web Store!</p>
     </>
   );
