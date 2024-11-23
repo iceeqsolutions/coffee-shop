@@ -1,4 +1,5 @@
 import coffeeBeans from "../assets/videos/coffeeBeans.mp4";
+import Featured from "../components/Featured";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
           playsInline
         ></video>
       </div>
+      <Featured />
     </>
   );
 };
