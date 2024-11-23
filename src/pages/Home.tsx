@@ -1,5 +1,6 @@
 import coffeeBeans from "../assets/videos/coffeeBeans.mp4";
 import Featured from "../components/Featured";
+import Blogs from "../components/Blogs";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
         ></video>
       </div>
       <Featured />
+      <Blogs />
     </>
   );
 };
