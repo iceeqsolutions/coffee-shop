@@ -1,8 +1,10 @@
 import coffeeBeans from "../assets/videos/coffeeBeans.mp4";
 import Featured from "../components/Featured";
 import Blogs from "../components/Blogs";
+import ApiConnection from "../modules/ApiConnection";
 
 const Home = () => {
+  const apiEndpoint = "https://fake-coffee-api.vercel.app/api";
   return (
     <>
       <div className="flex flex-col justify-center h-[573px] relative z-2 text-body-clr">
@@ -16,6 +18,7 @@ const Home = () => {
         ></video>
       </div>
       <Featured />
+      <ApiConnection apiEndpoint={apiEndpoint} />
       <Blogs />
     </>
   );
