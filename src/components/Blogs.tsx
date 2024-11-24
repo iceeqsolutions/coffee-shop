@@ -9,7 +9,7 @@ const Blogs = () => {
       <div className="flex gap-8 flex-wrap laptop:flex-col">
         {blogTexts.map((blog, index) => {
           return (
-            <div className="flex-1 flex flex-col gap-4" key={index}>
+            <div className="mb-10 flex-1 flex flex-col gap-4" key={index}>
               <img
                 src={blog.image}
                 alt={blog.title}
