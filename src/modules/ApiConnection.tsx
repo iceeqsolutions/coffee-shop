@@ -4,6 +4,7 @@ import {
 } from "../interfaces/ApiDataInterfaces";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import ShoppingCartButton from "../components/ShoppingCartButton";
 
 /* SAMPLE DATA
 "id": 1,
@@ -43,7 +44,7 @@ const ApiConnection: React.FC<ApiDataProps> = ({
         setShowData(response.data);
       }
     });
-  }, [apiEndpoint]);
+  }, [apiEndpoint, numberOfItems]);
 
   return (
     <>
@@ -68,6 +69,7 @@ const ApiConnection: React.FC<ApiDataProps> = ({
             <p className="px-8 pb-8 text-lg">
               Roast level: {item.roast_level}/5
             </p>
+            <ShoppingCartButton />
           </div>
         ))}
       </div>
