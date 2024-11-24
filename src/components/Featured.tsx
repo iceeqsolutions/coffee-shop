@@ -1,12 +1,15 @@
+import ApiConnection from "../modules/ApiConnection";
+
 const Featured = () => {
+  const apiEndpoint = "https://fake-coffee-api.vercel.app/api";
   return (
     <>
       <section className="flex flex-col items-center gap-8 w-full">
-        <h3 className="self-baseline uppercase font-semibold">On Sale</h3>
+        <h3 className="px-6 pt-12 mt-10 text-yellow-950 text-3xl self-baseline uppercase font-semibold">
+          Currently On Sale
+        </h3>
         <div className="flex flex-col gap-8 justify-center w-full">
-          <p>Product 1</p>
-          <p>Product 2</p>
-          <p>Product 3</p>
+          <ApiConnection apiEndpoint={apiEndpoint} numberOfItems={3} />
         </div>
       </section>
     </>

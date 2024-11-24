@@ -3,7 +3,7 @@ import blogTexts from "../assets/texts/blogTexts.tsx";
 const Blogs = () => {
   return (
     <section className="flex flex-col gap-8">
-      <h3 className="self-baseline uppercase font-semibold">
+      <h3 className="px-6 text-3xl text-yellow-950 self-baseline uppercase font-semibold">
         Latest community posts
       </h3>
       <div className="flex gap-8 flex-wrap laptop:flex-col">
@@ -16,13 +16,15 @@ const Blogs = () => {
                 className="w-full aspect-square object-cover object-center"
                 loading="lazy"
               />
-              <div className="flex flex-col gap-2">
+              <div className="p-6 flex flex-col gap-2 text-lg">
                 <h5 className="uppercase text-gray-400 font-semibold tracking-widest">
                   {blog.category}
                 </h5>
                 <h4 className="text-xl font-semibold mt-4">{blog.title}</h4>
-                <p>{blog.text}</p>
-                <a href="#">Read More</a>
+                <p className="h-48">{blog.text}</p>
+                <a className="text-yellow-600 font-bold" href="#">
+                  Read More
+                </a>
               </div>
             </div>
           );

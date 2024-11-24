@@ -1,5 +1,6 @@
 export interface ApiDataProps {
   apiEndpoint: string;
+  numberOfItems: number;
 }
 
 export interface ApiDataItemProps {

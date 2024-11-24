@@ -26,7 +26,10 @@ import axios from "axios";
 "image_url": "https://iili.io/H8Y78Qt.webp" 
 */
 
-const ApiConnection: React.FC<ApiDataProps> = ({ apiEndpoint }) => {
+const ApiConnection: React.FC<ApiDataProps> = ({
+  apiEndpoint,
+  numberOfItems,
+}) => {
   const [showData, setShowData] = useState<ApiDataItemProps[]>([]);
   useEffect(() => {
     if (!apiEndpoint) {
@@ -34,22 +37,40 @@ const ApiConnection: React.FC<ApiDataProps> = ({ apiEndpoint }) => {
       return;
     }
     axios.get(apiEndpoint).then((response) => {
-      setShowData(response.data);
+      if (numberOfItems < response.data.length) {
+        setShowData(response.data.slice(0, numberOfItems));
+      } else {
+        setShowData(response.data);
+      }
     });
   }, [apiEndpoint]);
 
   return (
     <>
-      {showData.map((item) => (
-        <div key={item.id}>
-          <h3>{item.name}</h3>
-          <p>{item.description}</p>
-          <p>{item.price}</p>
-          <p>{item.region}</p>
-          <p>{item.roast_level}</p>
-          <img src={item.image_url} alt={item.name} />
-        </div>
-      ))}
+      <div className="w-11/12 mx-auto mb-32 flex gap-8">
+        {showData.map((item) => (
+          <div
+            key={item.id}
+            className="flex flex-col justify-center bg-neutral-50 rounded-3xl shadow-2xl"
+          >
+            <h3 className="p-8 uppercase text-2xl text-gray-400 font-semibold tracking-widest">
+              {item.name}
+            </h3>
+            <img
+              className="aspect-square object-cover object-center"
+              loading="lazy"
+              src={item.image_url}
+              alt={item.name}
+            />
+            <p className="h-40 p-8 text-xl">{item.description}</p>
+            <p className="px-8 text-lg">Price: {item.price}€</p>
+            <p className="px-8 text-lg">Coffee bean region: {item.region}</p>
+            <p className="px-8 pb-8 text-lg">
+              Roast level: {item.roast_level}/5
+            </p>
+          </div>
+        ))}
+      </div>
     </>
   );
 };
