@@ -1,9 +1,18 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { ShoppingCartButtonInterface } from "../interfaces/ShoppingCartButtonInterface";
 
-const ShoppingCartButton = () => {
+const ShoppingCartButton: React.FC<ShoppingCartButtonInterface> = ({
+  numberOfCartItems,
+  increment,
+  decrement,
+}) => {
   const [quantity, setQuantity] = useState(0);
 
-  function increment() {
+  useEffect(() => {
+    setQuantity(numberOfCartItems);
+  }, [numberOfCartItems]);
+
+  /*   function increment() {
     setQuantity(quantity + 1);
   }
 
@@ -13,7 +22,8 @@ const ShoppingCartButton = () => {
     } else {
       setQuantity(0);
     }
-  }
+  } */
+  //   console.log(quantity);
 
   return (
     <div className="my-5 flex justify-center">

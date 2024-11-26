@@ -30,6 +30,9 @@ import ShoppingCartButton from "../components/ShoppingCartButton";
 const ApiConnection: React.FC<ApiDataProps> = ({
   apiEndpoint,
   numberOfItems,
+  numberOfCartItems,
+  increment,
+  decrement,
 }) => {
   const [showData, setShowData] = useState<ApiDataItemProps[]>([]);
   useEffect(() => {
@@ -69,7 +72,12 @@ const ApiConnection: React.FC<ApiDataProps> = ({
             <p className="px-8 pb-8 text-lg">
               Roast level: {item.roast_level}/5
             </p>
-            <ShoppingCartButton />
+            <ShoppingCartButton
+              key={item.id}
+              numberOfCartItems={numberOfCartItems}
+              increment={increment}
+              decrement={decrement}
+            />
           </div>
         ))}
       </div>

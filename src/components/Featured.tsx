@@ -1,6 +1,11 @@
 import ApiConnection from "../modules/ApiConnection";
+import { FeaturedInterface } from "../interfaces/FeaturedInterface";
 
-const Featured = () => {
+const Featured: React.FC<FeaturedInterface> = ({
+  numberOfCartItems,
+  increment,
+  decrement,
+}) => {
   const apiEndpoint = "https://fake-coffee-api.vercel.app/api";
   return (
     <>
@@ -9,7 +14,13 @@ const Featured = () => {
           Currently On Sale
         </h3>
         <div className="flex flex-col gap-8 justify-center w-full">
-          <ApiConnection apiEndpoint={apiEndpoint} numberOfItems={3} />
+          <ApiConnection
+            apiEndpoint={apiEndpoint}
+            numberOfItems={3}
+            numberOfCartItems={numberOfCartItems}
+            increment={increment}
+            decrement={decrement}
+          />
         </div>
       </section>
     </>

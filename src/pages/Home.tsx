@@ -2,8 +2,13 @@ import coffeeBeans from "../assets/videos/coffeeBeans.mp4";
 import Featured from "../components/Featured";
 import Blogs from "../components/Blogs";
 import Footer from "../components/Footer";
+import { HomeInterface } from "../interfaces/HomeInterface";
 
-const Home = () => {
+const Home: React.FC<HomeInterface> = ({
+  numberOfCartItems,
+  increment,
+  decrement,
+}) => {
   return (
     <>
       <div className="flex flex-col justify-center h-[573px] relative z-2 text-body-clr">
@@ -16,7 +21,11 @@ const Home = () => {
           playsInline
         ></video>
       </div>
-      <Featured />
+      <Featured
+        numberOfCartItems={numberOfCartItems}
+        increment={increment}
+        decrement={decrement}
+      />
       <Blogs />
       <Footer />
     </>

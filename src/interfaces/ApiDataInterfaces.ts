@@ -1,6 +1,9 @@
 export interface ApiDataProps {
   apiEndpoint: string;
   numberOfItems: number;
+  numberOfCartItems: number;
+  increment: () => void;
+  decrement: () => void;
 }
 
 export interface ApiDataItemProps {
