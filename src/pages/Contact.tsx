@@ -1,4 +1,4 @@
-const Contact = () => {
+const Contact: React.FC = () => {
   return (
     <>
       <h1>Contact Us</h1>

@@ -1,7 +1,7 @@
 import coffeeBeans from "../assets/videos/coffeeBeans.mp4";
 import Featured from "../components/Featured";
 import Blogs from "../components/Blogs";
-import Footer from "../components/Footer";
+
 import { HomeInterface } from "../interfaces/HomeInterface";
 
 const Home: React.FC<HomeInterface> = ({
@@ -27,7 +27,6 @@ const Home: React.FC<HomeInterface> = ({
         decrement={decrement}
       />
       <Blogs />
-      <Footer />
     </>
   );
 };

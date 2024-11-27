@@ -1,6 +1,11 @@
 import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
+import Shop from "./pages/Shop";
+import Contact from "./pages/Contact";
+import ShoppingCart from "./pages/ShoppingCart";
+import Footer from "./components/Footer";
 
 function App() {
   const [numberOfCartItems, setNumberOfCartItems] = useState<number>(0);
@@ -18,14 +23,25 @@ function App() {
   }
 
   return (
-    <>
+    <BrowserRouter>
       <Navbar />
-      <Home
-        numberOfCartItems={numberOfCartItems}
-        increment={increment}
-        decrement={decrement}
-      />
-    </>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Home
+              numberOfCartItems={numberOfCartItems}
+              increment={increment}
+              decrement={decrement}
+            />
+          }
+        />
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/shopping-cart" element={<ShoppingCart />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
   );
 }
 
