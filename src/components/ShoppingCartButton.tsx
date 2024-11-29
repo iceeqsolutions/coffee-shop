@@ -1,48 +1,30 @@
-import { useEffect, useState } from "react";
 import { ShoppingCartButtonInterface } from "../interfaces/ShoppingCartButtonInterface";
+import { addToCart, removeFromCart } from "../redux/features/cartSlice";
+import { RootState } from "../redux/store";
+import { useDispatch, useSelector } from "react-redux";
 
-const ShoppingCartButton: React.FC<ShoppingCartButtonInterface> = ({
-  numberOfCartItems,
-  increment,
-  decrement,
-}) => {
-  const [quantity, setQuantity] = useState(0);
-
-  useEffect(() => {
-    setQuantity(numberOfCartItems);
-  }, [numberOfCartItems]);
-
-  /*   function increment() {
-    setQuantity(quantity + 1);
-  }
-
-  function decrement() {
-    if (quantity > 0) {
-      setQuantity(quantity - 1);
-    } else {
-      setQuantity(0);
-    }
-  } */
-  //   console.log(quantity);
+const ShoppingCartButton: React.FC<ShoppingCartButtonInterface> = () => {
+  const dispatch = useDispatch();
+  const quantity = useSelector((state: RootState) => state.cart.value);
 
   return (
     <div className="my-5 flex justify-center">
       {quantity === 0 ? (
         <button
           className="px-5 pb-1 border-2 border-yellow-950 rounded-2xl"
-          onClick={increment}
+          onClick={() => dispatch(addToCart())}
         >
           Add to cart
         </button>
       ) : (
         <div>
-          <button className="px-1" onClick={decrement}>
+          <button className="px-1" onClick={() => dispatch(removeFromCart())}>
             -
           </button>
           <span className="px-5 pb-1 border-2 border-yellow-950 rounded-2xl">
             {quantity}
           </span>
-          <button className="px-1" onClick={increment}>
+          <button className="px-1" onClick={() => dispatch(addToCart())}>
             +
           </button>
         </div>
