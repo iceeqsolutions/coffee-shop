@@ -1,5 +1,8 @@
 export interface ShoppingCartButtonInterface {
-  numberOfCartItems: number;
-  increment: () => void;
-  decrement: () => void;
+  item: {
+    id: number;
+    name: string;
+    image_url: string;
+    quantity: number;
+  };
 }

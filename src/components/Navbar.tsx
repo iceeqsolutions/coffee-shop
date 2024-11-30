@@ -1,6 +1,11 @@
 import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { RootState } from "../redux/store";
 
 const Navbar: React.FC = () => {
+  const totalItems = useSelector((state: RootState) =>
+    state.cart.cartItems.reduce((total, item) => total + item.quantity, 0)
+  );
   return (
     <>
       <div className="bg-neutral-100 h-48 flex justify-between">
@@ -24,7 +29,7 @@ const Navbar: React.FC = () => {
         </div>
         <div className="shoppingCart relative">
           <span className="px-3 pb-1 border-yellow-600 border-2 absolute top-5 left-5 text-yellow-400 font-bold text-2xl rounded-full bg-yellow-950">
-            3
+            {totalItems}
           </span>
           <NavLink to="/shopping-cart">
             <img

@@ -14,4 +14,5 @@ export interface ApiDataItemProps {
   region: string;
   roast_level: number;
   image_url: string;
+  quantity: number;
 }
