@@ -48,22 +48,22 @@ const ApiConnection: React.FC<ApiDataProps> = ({
 
   return (
     <>
-      <div className="w-11/12 mx-auto mb-32 flex gap-8">
+      <div className="mx-auto mb-32 flex flex-wrap gap-8 justify-center items-center">
         {showData.map((item) => (
           <div
             key={item.id}
-            className="flex flex-col justify-center bg-neutral-50 rounded-3xl shadow-2xl"
+            className="w-96 flex flex-col justify-center bg-neutral-50 rounded-3xl shadow-2xl"
           >
-            <h3 className="p-8 uppercase text-2xl text-gray-400 font-semibold tracking-widest">
+            <h3 className="h-24 p-8 uppercase text-2xl text-gray-400 font-semibold tracking-widest">
               {item.name}
             </h3>
             <img
-              className="aspect-square object-cover object-center"
+              className="h-80 aspect-square object-cover object-center"
               loading="lazy"
               src={item.image_url}
               alt={item.name}
             />
-            <p className="h-40 p-8 text-xl">{item.description}</p>
+            <p className="h-64 p-8 text-xl">{item.description}</p>
             <p className="px-8 text-lg">Price: {item.price}€</p>
             <p className="px-8 text-lg">Coffee bean region: {item.region}</p>
             <p className="px-8 pb-8 text-lg">
