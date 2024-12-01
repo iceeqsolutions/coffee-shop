@@ -32,11 +32,14 @@ const ApiConnection: React.FC<ApiDataProps> = ({
   numberOfItems,
 }) => {
   const [showData, setShowData] = useState<ApiDataItemProps[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+
   useEffect(() => {
     if (!apiEndpoint) {
       console.error("API endpoint is undefined");
       return;
     }
+    // setIsLoading(true);
     axios.get(apiEndpoint).then((response) => {
       if (numberOfItems < response.data.length) {
         setShowData(response.data.slice(0, numberOfItems));
@@ -44,11 +47,17 @@ const ApiConnection: React.FC<ApiDataProps> = ({
         setShowData(response.data);
       }
     });
-  }, [apiEndpoint, numberOfItems]);
+    setIsLoading(false);
+  }, [apiEndpoint, numberOfItems, isLoading]);
 
   return (
     <>
       <div className="mx-auto mb-32 flex flex-wrap gap-8 justify-center items-center">
+        {isLoading && (
+          <p className="text-yellow-700 text-3xl my-10 font-bold italic">
+            Loading...
+          </p>
+        )}
         {showData.map((item) => (
           <div
             key={item.id}
