@@ -36,7 +36,16 @@ function App() {
             />
           }
         />
-        <Route path="/shop" element={<Shop />} />
+        <Route
+          path="/shop"
+          element={
+            <Shop
+              numberOfCartItems={numberOfCartItems}
+              increment={increment}
+              decrement={decrement}
+            />
+          }
+        />
         <Route path="/contact" element={<Contact />} />
         <Route path="/shopping-cart" element={<ShoppingCart />} />
       </Routes>

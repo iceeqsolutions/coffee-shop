@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
 
@@ -15,14 +15,20 @@ const Navbar: React.FC = () => {
           alt="Webshop logo"
         />
         <div className="w-3/4">
-          <div className="flex h-full items-center justify-center gap-20">
-            <NavLink className="text-2xl text-yellow-600" to="/">
+          <div className="linkText flex h-full items-center justify-center gap-10">
+            <NavLink className="pt-1 px-5 pb-2 text-2xl text-yellow-600" to="/">
               Home
             </NavLink>
-            <NavLink className="text-2xl text-yellow-600" to="/shop">
+            <NavLink
+              className="linkText pt-1 px-5 pb-2 text-2xl text-yellow-600"
+              to="/shop"
+            >
               Shop
             </NavLink>
-            <NavLink className="text-2xl text-yellow-600" to="/contact">
+            <NavLink
+              className="linkText pt-1 px-5 pb-2 text-2xl text-yellow-600"
+              to="/contact"
+            >
               Contact
             </NavLink>
           </div>
@@ -31,13 +37,13 @@ const Navbar: React.FC = () => {
           <span className="px-3 pb-1 border-yellow-600 border-2 absolute top-5 left-5 text-yellow-400 font-bold text-2xl rounded-full bg-yellow-950">
             {totalItems}
           </span>
-          <NavLink to="/shopping-cart">
+          <Link to="/shopping-cart">
             <img
               className="h-12 w-12 m-10"
               src="src/assets/images/shoppingCart.png"
               alt="Shopping cart"
             />
-          </NavLink>
+          </Link>
         </div>
       </div>
     </>
