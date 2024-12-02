@@ -6,6 +6,7 @@ import Shop from "./pages/Shop";
 import Contact from "./pages/Contact";
 import ShoppingCart from "./pages/ShoppingCart";
 import Footer from "./components/Footer";
+import NotFound from "./pages/NotFound";
 
 function App() {
   const [numberOfCartItems, setNumberOfCartItems] = useState<number>(0);
@@ -48,6 +49,7 @@ function App() {
         />
         <Route path="/contact" element={<Contact />} />
         <Route path="/shopping-cart" element={<ShoppingCart />} />
+        <Route path="/*" element={<NotFound />} />
       </Routes>
       <Footer />
     </BrowserRouter>
