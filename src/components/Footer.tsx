@@ -1,5 +1,6 @@
 import footerLinks from "../assets/texts/footerLinks";
 import footerBeans from "../assets/images/footerBeans.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -12,9 +13,11 @@ const Footer = () => {
           >
             <h4 className="uppercase text-xl font-semibold">{item.header}</h4>
             {item.links.map((link) => (
-              <li className="cursor-pointer hover:underline" key={link}>
-                {link}
-              </li>
+              <Link to="./NotFound">
+                <li className="cursor-pointer hover:underline" key={link}>
+                  {link}
+                </li>
+              </Link>
             ))}
           </ul>
         ))}

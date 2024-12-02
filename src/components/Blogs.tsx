@@ -1,4 +1,5 @@
 import blogTexts from "../assets/texts/blogTexts.tsx";
+import { Link } from "react-router-dom";
 
 const Blogs = () => {
   return (
@@ -22,9 +23,11 @@ const Blogs = () => {
                 </h5>
                 <h4 className="text-xl font-semibold mt-4">{blog.title}</h4>
                 <p className="h-48">{blog.text}</p>
-                <a className="text-yellow-600 font-bold" href="#">
-                  Read More
-                </a>
+                <Link to="./NotFound">
+                  <a className="text-yellow-600 font-bold" href="#">
+                    Read More
+                  </a>
+                </Link>
               </div>
             </div>
           );
