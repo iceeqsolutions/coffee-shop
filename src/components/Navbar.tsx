@@ -8,7 +8,7 @@ const Navbar: React.FC = () => {
   );
   return (
     <>
-      <div className="bg-neutral-100 h-48 flex justify-between">
+      <div className="bg-neutral-100 h-48 flex justify-between fixed top-0 left-0 w-full z-10">
         <img
           className="h-40 m-5"
           src="src/assets/images/BeanyCupLogo.png"

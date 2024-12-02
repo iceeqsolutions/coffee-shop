@@ -11,7 +11,7 @@ const Shop: React.FC<ShopInterface> = ({
 
   return (
     <>
-      <div className="flex flex-col justify-center items-center">
+      <div className="mt-48 flex flex-col justify-center items-center">
         <div className="banner relative">
           <h2 className="absolute top-16 left-20">Coffee Shop</h2>
           <img
