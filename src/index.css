@@ -13,12 +13,16 @@
 }
 
 .bannerHeading > h1,
-.banner > h2 {
+.banner {
   font-family: "Charm", cursive;
   font-style: italic;
   letter-spacing: 2px;
-  font-size: 6.5rem;
+  color: #fff;
   font-weight: 400;
   text-shadow: -1px 10px 3px rgba(0, 0, 0, 0.5);
-  color: #fff;
+}
+
+.bannerHeading > h1,
+.banner > h2 {
+  font-size: 6.5rem;
 }
