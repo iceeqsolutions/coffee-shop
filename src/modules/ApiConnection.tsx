@@ -39,24 +39,30 @@ const ApiConnection: React.FC<ApiDataProps> = ({
       console.error("API endpoint is undefined");
       return;
     }
-    // setIsLoading(true);
-    axios.get(apiEndpoint).then((response) => {
-      if (numberOfItems < response.data.length) {
-        setShowData(response.data.slice(0, numberOfItems));
-      } else {
-        setShowData(response.data);
-      }
-    });
-    setIsLoading(false);
-  }, [apiEndpoint, numberOfItems, isLoading]);
+    setIsLoading(true);
+    axios
+      .get(apiEndpoint)
+      .then((response) => {
+        if (numberOfItems < response.data.length) {
+          setShowData(response.data.slice(0, numberOfItems));
+        } else {
+          setShowData(response.data);
+        }
+        setIsLoading(false);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+        setIsLoading(false);
+      });
+  }, [apiEndpoint, numberOfItems]);
 
   return (
     <>
       <div className="mx-auto mb-32 flex flex-wrap gap-8 justify-center items-center">
-        {isLoading && (
-          <p className="text-yellow-700 text-3xl my-10 font-bold italic">
+        {isLoading === true && (
+          <h2 className="text-red-700 text-3xl font-bold italic z-10">
             Loading...
-          </p>
+          </h2>
         )}
         {showData.map((item) => (
           <div
