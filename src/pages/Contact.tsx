@@ -10,11 +10,9 @@ const Contact: React.FC = () => {
         <div className="banner relative">
           <div className="absolute top-6 left-20">
             <h2 className="text-8xl">We're here</h2>
-            <h3 className="text-5xl">...and we'd love to hear from you</h3>
-
-            <h4 className="mt-20 text-3xl">
-              Our door is always open for a good cup of coffee...
-            </h4>
+            <h3 className="pt-12 text-5xl">
+              ...and we'd love to hear from you
+            </h3>
           </div>
           <img
             src={contactUs}

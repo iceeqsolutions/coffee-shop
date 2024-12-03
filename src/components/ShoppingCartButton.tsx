@@ -35,6 +35,9 @@ const ShoppingCartButton: React.FC<ShoppingCartButtonInterface> = ({
           <button className="px-1" onClick={() => dispatch(addToCart(item))}>
             +
           </button>
+          <h3 className="py-5">
+            Total: {cartItem && quantity * cartItem?.price}€
+          </h3>
         </div>
       )}
     </div>

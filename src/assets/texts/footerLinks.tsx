@@ -3,14 +3,7 @@ import { FooterLinksInterface } from "../../interfaces/FooterLinksInterface";
 const footerLinks: FooterLinksInterface[] = [
   {
     header: "Customer Service",
-    links: [
-      "Contact Us",
-      "FAQ",
-      "Shipping",
-      "Returns",
-      "Privacy Policy",
-      "Terms of Service",
-    ],
+    links: ["FAQ", "Shipping", "Returns", "Privacy Policy", "Terms of Service"],
   },
   {
     header: "About Us",
