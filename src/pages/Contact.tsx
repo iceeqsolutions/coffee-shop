@@ -1,5 +1,6 @@
 import contactUs from "../assets/images/contactUs.jpg";
 import contactText from "../assets/texts/contactTexts";
+import FeedbackForm from "../components/FeedbackForm";
 
 const Contact: React.FC = () => {
   return (
@@ -48,6 +49,7 @@ const Contact: React.FC = () => {
           </section>
         </div>
       </div>
+      <FeedbackForm />
     </>
   );
 };
