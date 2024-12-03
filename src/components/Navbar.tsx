@@ -8,14 +8,14 @@ const Navbar: React.FC = () => {
   );
   return (
     <>
-      <div className="bg-neutral-100 h-48 flex justify-between fixed top-0 left-0 w-full z-10 shadow-2xl">
+      <div className="bg-neutral-100 h-56 flex justify-between fixed top-0 left-0 w-full z-10 shadow-2xl max-w-lg:relative">
         <img
           className="h-40 m-5"
           src="src/assets/images/BeanyCupLogo.png"
           alt="Webshop logo"
         />
-        <div className="w-3/4">
-          <div className="linkText flex h-full items-center justify-center gap-10">
+        <div className="flex w-3/4 justify-center max-lg:absolute bottom-2 max-lg:w-full max-lg:justify-around">
+          <div className="mx-20 linkText flex h-full items-center gap-10 flex-grow justify-around">
             <NavLink className="pt-1 px-5 pb-2 text-2xl text-yellow-600" to="/">
               Home
             </NavLink>
@@ -34,9 +34,11 @@ const Navbar: React.FC = () => {
           </div>
         </div>
         <div className="shoppingCart relative">
-          <span className="px-3 pb-1 border-yellow-600 border-2 absolute top-5 left-5 text-yellow-400 font-bold text-2xl rounded-full bg-yellow-950">
-            {totalItems}
-          </span>
+          {totalItems > 0 && (
+            <span className="px-2 border-yellow-600 absolute top-8 left-8 text-white font-bold text-xl rounded-full bg-stone-500 bg-opacity-90">
+              {totalItems}
+            </span>
+          )}
           <Link to="/shopping-cart">
             <img
               className="h-12 w-12 m-10"
