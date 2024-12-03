@@ -1,5 +1,6 @@
 import notFound from "../assets/images/notFoundBanner.jpg";
 import sloth from "../assets/images/sloth.png";
+// import sloth from "../assets/images/sloth2.jpg";
 import { Link } from "react-router-dom";
 
 const NotFound: React.FC = () => {
@@ -7,11 +8,8 @@ const NotFound: React.FC = () => {
     <>
       <div className="mt-48 flex flex-col justify-center items-center">
         <div className="banner relative">
-          <div className="absolute flex flex-col top-6 left-20 gap-20">
+          <div className="absolute flex flex-col top-20 left-32 gap-20">
             <h2 className="text-8xl text-yellow-900">404...</h2>
-            <h3 className="text-5xl text-yellow-900">
-              ...I could have sworn the page was here a minute ago
-            </h3>
           </div>
           <img
             src={notFound}
@@ -24,22 +22,22 @@ const NotFound: React.FC = () => {
         <section className="m-10 w-1/3 flex flex-col justify-center bg-neutral-200 rounded-3xl shadow-2xl">
           <div className="m-20 flex gap-8">
             <div className="flex flex-col w-full gap-10">
-              <h3 className="text-lg uppercase font-semibold flex gap-1 items-center">
+              <h3 className="text-3xl text-yellow-900 uppercase font-semibold flex gap-1 items-center">
                 Well this is a bit ironic...
               </h3>
-              <h4>
+              <h4 className="text-lg">
                 Unfortunately our software developers ran out of coffee and left
                 me with the task of fixing this page.
               </h4>
-              <h4>
+              <h4 className="text-lg">
                 I will get right to it - should actually be ready in a jiffy...
               </h4>
               <img
-                className="object-contain h-96"
+                className="object-contain h-96 animate-wiggle"
                 src={sloth}
                 alt="Coffee shop"
               />
-              <h4>
+              <h4 className="text-lg">
                 In the meanwhile, please visit our online shop and get yourself
                 a treat!
               </h4>
