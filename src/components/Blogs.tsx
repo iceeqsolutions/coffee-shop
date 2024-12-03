@@ -24,9 +24,7 @@ const Blogs = () => {
                 <h4 className="text-xl font-semibold mt-4">{blog.title}</h4>
                 <p className="h-48">{blog.text}</p>
                 <Link to="./NotFound">
-                  <a className="text-yellow-600 font-bold" href="#">
-                    Read More
-                  </a>
+                  <p className="text-yellow-600 font-bold">Read More</p>
                 </Link>
               </div>
             </div>

@@ -13,10 +13,8 @@ const Footer = () => {
           >
             <h4 className="uppercase text-xl font-semibold">{item.header}</h4>
             {item.links.map((link) => (
-              <Link to="./NotFound">
-                <li className="cursor-pointer hover:underline" key={link}>
-                  {link}
-                </li>
+              <Link to="./NotFound" key={link}>
+                <li className="cursor-pointer hover:underline">{link}</li>
               </Link>
             ))}
           </ul>
