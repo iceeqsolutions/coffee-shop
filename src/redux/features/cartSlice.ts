@@ -51,6 +51,12 @@ export const cartSlice = createSlice({
 
 export const { addToCart, removeFromCart } = cartSlice.actions;
 
+export const selectTotalSum = (state: CartState) =>
+  state.cartItems.reduce(
+    (total, item) => total + item.quantity * item.price,
+    0
+  );
+
 // Other code such as selectors can use the imported `RootState` type
 export const selectCart = (state: RootState) => state.cart.cartItems;
 

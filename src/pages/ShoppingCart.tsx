@@ -1,10 +1,14 @@
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
+import { selectTotalSum } from "../redux/features/cartSlice";
 import ShoppingCartButton from "../components/ShoppingCartButton";
 import coffeeShopBanner from "../assets/images/coffeeShopBanner.jpg";
 
 const ShoppingCart: React.FC = () => {
   const cartItems = useSelector((state: RootState) => state.cart.cartItems);
+  const totalSum = useSelector((state: RootState) =>
+    selectTotalSum(state.cart)
+  );
 
   return (
     <>
@@ -44,16 +48,8 @@ const ShoppingCart: React.FC = () => {
               </div>
             </div>
           ))}
+          {cartItems.length > 0 && <h2>Total: {totalSum}€</h2>}
         </div>
-        <h2>
-          Total:
-          {cartItems.map((item) => {
-            let total: number = 0;
-            total = item.price * item.quantity;
-            console.log(total);
-            return total;
-          })}
-        </h2>
       </div>
     </>
   );
