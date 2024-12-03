@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
 import { selectTotalSum } from "../redux/features/cartSlice";
+import { Link } from "react-router-dom";
 import ShoppingCartButton from "../components/ShoppingCartButton";
 import coffeeShopBanner from "../assets/images/coffeeShopBanner.jpg";
 
@@ -48,7 +49,20 @@ const ShoppingCart: React.FC = () => {
               </div>
             </div>
           ))}
-          {cartItems.length > 0 && <h2>Total: {totalSum}€</h2>}
+          {cartItems.length > 0 && (
+            <>
+              <div className="m-5 flex justify-end">
+                <h2 className="text-2xl font-bold">Cart Total: {totalSum}€</h2>
+              </div>
+              <div className="mx-14 mt-5 flex border-t-2 border-gray-300 justify-center">
+                <Link to="../">
+                  <button className="my-16 px-5 py-2 text-2xl bg-yellow-900 border-2 border-yellow-950 text-white rounded-2xl hover:bg-white hover:text-yellow-950 hover:border-2 hover ">
+                    Checkout
+                  </button>
+                </Link>
+              </div>
+            </>
+          )}
         </div>
       </div>
     </>
