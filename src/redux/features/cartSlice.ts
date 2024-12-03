@@ -46,10 +46,13 @@ export const cartSlice = createSlice({
         }
       }
     },
+    clearCart: (state) => {
+      state.cartItems = [];
+    },
   },
 });
 
-export const { addToCart, removeFromCart } = cartSlice.actions;
+export const { addToCart, removeFromCart, clearCart } = cartSlice.actions;
 
 export const selectTotalSum = (state: CartState) =>
   state.cartItems.reduce(
