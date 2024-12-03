@@ -1,15 +1,15 @@
+import { Link } from "react-router-dom";
+
 const FeedbackForm = () => {
   return (
     <>
       <form className="flex justify-center w-full">
-        <div className="m-20 p-10 flex justify-center  bg-neutral-50 rounded-3xl shadow-2xl">
+        <div className="m-20 p-10 flex justify-center  bg-natural-50 rounded-3xl shadow-2xl">
           <div className="border-b border-gray-900/10 pb-12">
-            <h2 className="text-base/7 font-semibold text-gray-900">
-              Feedback
-            </h2>
-            <p className="mt-1 text-sm/6 text-gray-600">
+            <h2 className="text-xl/7 font-semibold text-gray-900">Feedback</h2>
+            <p className="mt-1 text-md/6 text-gray-600">
               Share your thoughts, concerns and suggestions on how we can
-              improve. You can do so anonumously or include your email address
+              improve. You can do so anonymously or include your email address
               for a guaranteed response.
             </p>
 
@@ -17,7 +17,7 @@ const FeedbackForm = () => {
               <div className="sm:col-span-4">
                 <label
                   htmlFor="username"
-                  className="block text-sm/6 font-medium text-gray-900"
+                  className="block text-xl/6 font-medium text-gray-900"
                 >
                   Email (optional)
                 </label>
@@ -37,7 +37,7 @@ const FeedbackForm = () => {
               <div className="col-span-full">
                 <label
                   htmlFor="about"
-                  className="block text-sm/6 font-medium text-gray-900"
+                  className="block text-xl/6 font-medium text-gray-900"
                 >
                   Comments, concerns and suggestions
                 </label>
@@ -53,12 +53,14 @@ const FeedbackForm = () => {
               </div>
 
               <div className="sm:col-span-6">
-                <button
-                  type="button"
-                  className="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
-                >
-                  Send Feedback
-                </button>
+                <Link to="../">
+                  <button
+                    type="button"
+                    className="rounded-xl bg-white px-3 py-2 text-xl font-semibold text-gray-900 shadow-xl ring-2 ring-inset ring-yellow-500"
+                  >
+                    Send Feedback
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
