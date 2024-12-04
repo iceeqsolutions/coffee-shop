@@ -11,18 +11,3 @@
 
   transition: all 0.3s ease-in-out;
 }
-
-.bannerHeading > h1,
-.banner {
-  font-family: "Charm", cursive;
-  font-style: italic;
-  letter-spacing: 2px;
-  color: #fff;
-  font-weight: 400;
-  text-shadow: -1px 10px 3px rgba(0, 0, 0, 0.5);
-}
-
-.bannerHeading > h1,
-.banner > h2 {
-  font-size: 6.5rem;
-}
