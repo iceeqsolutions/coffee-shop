@@ -17,7 +17,7 @@ const ShoppingCart: React.FC = () => {
 
   return (
     <>
-      <div className="mt-48 flex flex-col justify-center items-center">
+      <div className="mt-48 desktop:mt-0 flex flex-col justify-center items-center">
         <div className="w-full h-80 bg-cover bg-right bg-no-repeat bg-ShoppingCart relative">
           <div className="absolute top-10 left-20 text-white italic font-charm">
             <h2 className="text-8xl">Shopping Cart</h2>

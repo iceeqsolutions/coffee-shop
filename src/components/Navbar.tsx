@@ -8,25 +8,28 @@ const Navbar: React.FC = () => {
   );
   return (
     <>
-      <div className="bg-neutral-100 h-56 flex justify-between fixed top-0 left-0 w-full z-10 shadow-2xl max-w-lg:relative">
+      <div className="bg-neutral-100 h-56 flex justify-between fixed top-0 left-0 w-full z-10 shadow-2xl desktop:relative">
         <img
           className="h-40 m-5"
           src="src/assets/images/BeanyCupLogo.png"
           alt="Webshop logo"
         />
-        <div className="flex w-3/4 justify-center max-lg:absolute bottom-2 max-lg:w-full max-lg:justify-around">
-          <div className="mx-20 linkText flex h-full items-center gap-10 flex-grow justify-around">
-            <NavLink className="pt-1 px-5 pb-2 text-2xl text-yellow-600" to="/">
+        <div className="flex w-3/4 justify-center desktop:absolute bottom-2 desktop:w-full desktop:justify-around">
+          <div className="ml-20 mr-10 desktop:mx-20 linkText flex h-full items-center gap-10 flex-grow justify-around">
+            <NavLink
+              className="pt-1 px-5 pb-2 text-3xl desktop:text-2xl text-yellow-600"
+              to="/"
+            >
               Home
             </NavLink>
             <NavLink
-              className="linkText pt-1 px-5 pb-2 text-2xl text-yellow-600"
+              className="linkText pt-1 px-5 pb-2 text-3xl desktop:text-2xl text-yellow-600"
               to="/shop"
             >
               Shop
             </NavLink>
             <NavLink
-              className="linkText pt-1 px-5 pb-2 text-2xl text-yellow-600"
+              className="linkText pt-1 px-5 pb-2 text-3xl desktop:text-2xl text-yellow-600"
               to="/contact"
             >
               Contact

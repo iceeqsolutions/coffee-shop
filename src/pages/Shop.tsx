@@ -10,7 +10,7 @@ const Shop: React.FC<ShopInterface> = ({
 
   return (
     <>
-      <div className="mt-48 flex flex-col justify-center items-center">
+      <div className="mt-48 desktop:mt-0 flex flex-col justify-center items-center">
         <div className="w-full h-80 bg-cover bg-right bg-no-repeat bg-CoffeeShop relative">
           <h2 className="font-charm text-white text-8xl italic absolute top-16 left-20">
             Coffee Shop
