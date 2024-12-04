@@ -8,6 +8,7 @@ import ShoppingCart from "./pages/ShoppingCart";
 import Footer from "./components/Footer";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
+import Footnote from "./components/Footnote";
 
 function App() {
   const [numberOfCartItems, setNumberOfCartItems] = useState<number>(0);
@@ -53,6 +54,7 @@ function App() {
           <Route path="/shopping-cart" element={<ShoppingCart />} />
           <Route path="/*" element={<NotFound />} />
         </Routes>
+        <Footnote />
         <Footer />
       </ScrollToTop>
     </BrowserRouter>
