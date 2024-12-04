@@ -17,12 +17,12 @@ const Blogs = () => {
                 className="w-full aspect-square object-cover object-center"
                 loading="lazy"
               />
-              <div className="p-6 flex flex-col gap-2 text-lg">
+              <div className="p-6 flex flex-col gap-2 text-lg h-fit">
                 <h5 className="uppercase text-gray-400 font-semibold tracking-widest">
                   {blog.category}
                 </h5>
                 <h4 className="text-xl font-semibold mt-4">{blog.title}</h4>
-                <p className="h-48">{blog.text}</p>
+                <p className="max-h-fit">{blog.text}</p>
                 <Link to="./NotFound">
                   <p className="text-yellow-600 font-bold">Read More</p>
                 </Link>
