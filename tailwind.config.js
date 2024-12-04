@@ -2,6 +2,15 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    screens: {
+      phone: { max: "400px" },
+
+      tablet: { max: "550px" },
+
+      laptop: { max: "768px" },
+
+      desktop: { max: "1000px" },
+    },
     fontSize: {
       xs: ["0.75rem", { lineHeight: "1rem" }],
       sm: ["0.875rem", { lineHeight: "1.25rem" }],
