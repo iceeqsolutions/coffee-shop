@@ -60,7 +60,7 @@ const ApiConnection: React.FC<ApiDataProps> = ({
     <>
       <div className="mx-auto mb-32 flex flex-wrap gap-8 justify-center items-center">
         {isLoading === true && (
-          <h2 className="text-red-700 text-3xl font-bold italic z-10">
+          <h2 className="text-red-700 text-5xl font-charm font-bold italic">
             Loading...
           </h2>
         )}

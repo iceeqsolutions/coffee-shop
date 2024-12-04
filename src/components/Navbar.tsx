@@ -15,21 +15,18 @@ const Navbar: React.FC = () => {
           alt="Webshop logo"
         />
         <div className="flex w-3/4 justify-center desktop:absolute bottom-2 desktop:w-full desktop:justify-around">
-          <div className="ml-20 mr-10 desktop:mx-20 linkText flex h-full items-center gap-10 flex-grow justify-around">
-            <NavLink
-              className="pt-1 px-5 pb-2 text-3xl desktop:text-2xl text-yellow-600"
-              to="/"
-            >
+          <div className="ml-20 mr-2 linkText flex h-full items-center justify-center gap-20 flex-grow desktop:mx-20 desktop:gap-10 desktop:justify-around">
+            <NavLink className="pt-1 px-5 pb-2 text-2xl text-yellow-600" to="/">
               Home
             </NavLink>
             <NavLink
-              className="linkText pt-1 px-5 pb-2 text-3xl desktop:text-2xl text-yellow-600"
+              className="linkText pt-1 px-5 pb-2 text-2xl text-yellow-600"
               to="/shop"
             >
               Shop
             </NavLink>
             <NavLink
-              className="linkText pt-1 px-5 pb-2 text-3xl desktop:text-2xl text-yellow-600"
+              className="linkText pt-1 px-5 pb-2 text-2xl text-yellow-600"
               to="/contact"
             >
               Contact

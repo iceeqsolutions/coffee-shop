@@ -37,10 +37,10 @@ export default {
     },
     extend: {
       backgroundImage: {
-        NotFound: "url('src/assets/images/notFoundBanner.jpg')",
-        CoffeeShop: "url('src/assets/images/shopBanner.jpg')",
-        ShoppingCart: "url('src/assets/images/coffeeShopBanner.jpg')",
-        Contact: "url('src/assets/images/contactUs.jpg')",
+        NotFound: "url('/notFoundBanner.jpg')",
+        CoffeeShop: "url('/shopBanner.jpg')",
+        ShoppingCart: "url('/coffeeShopBanner.jpg')",
+        Contact: "url('/contactUs.jpg')",
       },
       keyframes: {
         wiggle: {

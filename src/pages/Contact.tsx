@@ -4,11 +4,13 @@ import FeedbackForm from "../components/FeedbackForm";
 const Contact: React.FC = () => {
   return (
     <>
-      <div className="mt-48 desktop:mt-0 flex flex-col justify-center items-center">
-        <div className="w-full h-80 bg-cover bg-right bg-no-repeat bg-Contact relative">
-          <div className="absolute top-10 left-20 text-white italic font-charm">
-            <h2 className="text-8xl">We're here</h2>
-            <h3 className="pt-4 text-5xl">...and we'd love to hear from you</h3>
+      <div className="mt-56 desktop:mt-0 flex flex-col justify-center items-center">
+        <div className="w-full h-60 bg-cover bg-right bg-no-repeat bg-Contact relative">
+          <div className="absolute top-10 left-20 text-white italic font-charm desktop:left-16">
+            <h2 className="text-6xl desktop:text-5xl">We're here</h2>
+            <h3 className="pt-4 text-5xl desktop:text-4xl">
+              ...and we'd love to hear from you
+            </h3>
           </div>
         </div>
         <div className="w-full mt-10 flex gap-2 p-2 justify-center">
@@ -24,13 +26,13 @@ const Contact: React.FC = () => {
                   src={item.image}
                   alt="Coffee shop"
                 />
-                <h2 className="p-2 text-2xl">
+                <h2 className="p-2 text-xl">
                   {item.header === "Visit Us"
                     ? "Our address: "
                     : item.header === "Call Us"
                     ? "Our Phone: "
                     : "Our Email: "}
-                  <span className="text-yellow-900 font-bold text-xl">
+                  <span className="text-yellow-900 font-bold text-lg">
                     {item.contact}
                   </span>
                 </h2>
