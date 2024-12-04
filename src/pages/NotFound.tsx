@@ -1,21 +1,14 @@
-// import notFound from "../assets/images/notFoundBanner.jpg";
 import sloth from "../assets/images/sloth.png";
-// import sloth from "../assets/images/sloth2.jpg";
 import { Link } from "react-router-dom";
 
 const NotFound: React.FC = () => {
   return (
     <>
-      <div className="mt-56 desktop:mt-0 flex flex-col justify-center items-center">
+      <div className="mt-56 flex flex-col justify-center items-center">
         <div className="w-full h-60 bg-cover bg-center bg-no-repeat bg-NotFound relative border-b-4 border-yellow-800 border-opacity-30">
           <div className="absolute top-20 left-32 text-white italic font-charm">
             <h2 className="text-7xl text-yellow-600">404...</h2>
           </div>
-          {/*           <img
-            src={notFound}
-            alt="Contact banner"
-            className="w-full bg-contain"
-          /> */}
         </div>
       </div>
       <div className="mt-10 flex flex-col items-center gap-2 p-2">

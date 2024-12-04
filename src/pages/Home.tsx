@@ -12,7 +12,7 @@ const Home: React.FC<HomeInterface> = ({
 }) => {
   return (
     <>
-      <div className="mt-56 desktop:mt-0 flex flex-col justify-center h-[350px] relative z-2 text-body-clr">
+      <div className="mt-56 flex flex-col justify-center h-[350px] relative z-2 text-body-clr">
         <div className="h-52 bannerHeading flex flex-col justify-between absolute top-20 left-24 desktop:left-16">
           <h1 className="font-charm text-white text-6xl italic desktop:text-5xl">
             Fresh coffee from around the world...

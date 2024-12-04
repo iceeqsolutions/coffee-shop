@@ -4,7 +4,7 @@ import FeedbackForm from "../components/FeedbackForm";
 const Contact: React.FC = () => {
   return (
     <>
-      <div className="mt-56 desktop:mt-0 flex flex-col justify-center items-center">
+      <div className="mt-56 flex flex-col justify-center items-center">
         <div className="w-full h-60 bg-cover bg-right bg-no-repeat bg-Contact relative">
           <div className="absolute top-10 left-20 text-white italic font-charm desktop:left-16">
             <h2 className="text-6xl desktop:text-5xl">We're here</h2>
