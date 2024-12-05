@@ -1,6 +1,6 @@
 # Coffee Shop - a React/TypeScript/Redux/Tailwind Demo
 
-![](./src/assets/images/CoffeeShop.png.png)
+![](./src/assets/images/CoffeeShop.png)
 
 <p align="center">
   TypeScript Demo by <a href="https://iceeqsolutions.fi/">iCeeqSolutions</a>

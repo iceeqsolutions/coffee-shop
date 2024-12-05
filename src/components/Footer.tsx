@@ -20,7 +20,11 @@ const Footer = () => {
           </ul>
         ))}
         <div className="flex items-center">
-          <img className="max-h-52" src={footerBeans} alt="Coffee beans" />
+          <img
+            className="max-h-52"
+            src={footerBeans}
+            alt="Coffee beans in a heart shape"
+          />
         </div>
       </div>
     </footer>

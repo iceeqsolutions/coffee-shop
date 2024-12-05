@@ -16,7 +16,7 @@ const FeedbackForm = () => {
             <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
               <div className="sm:col-span-4">
                 <label
-                  htmlFor="username"
+                  htmlFor="email"
                   className="block text-lg/6 font-medium text-gray-900"
                 >
                   Email (optional)
@@ -36,7 +36,7 @@ const FeedbackForm = () => {
 
               <div className="col-span-full">
                 <label
-                  htmlFor="about"
+                  htmlFor="feedback"
                   className="block text-lg/6 font-medium text-gray-900"
                 >
                   Comments, concerns and suggestions

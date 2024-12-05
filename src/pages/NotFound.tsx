@@ -28,7 +28,7 @@ const NotFound: React.FC = () => {
               <img
                 className="object-contain h-96 animate-wiggle"
                 src={sloth}
-                alt="Coffee shop"
+                alt="Sloth in a tree facing the camera"
               />
               <h4 className="text-md">
                 In the meanwhile, please visit our online shop and find your
