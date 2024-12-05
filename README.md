@@ -1,50 +1,44 @@
-# React + TypeScript + Vite
+# Coffee Shop - a React/TypeScript/Redux/Tailwind Demo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![](./src/assets/images/CoffeeShop.png.png)
 
-Currently, two official plugins are available:
+<p align="center">
+  TypeScript Demo by <a href="https://iceeqsolutions.fi/">iCeeqSolutions</a>
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## About
 
-## Expanding the ESLint configuration
+The Coffee Shop is a React/TypeScript demo project using Redux in the background, which allows for easier access to global state variables, making it ideal e.g. in web shop projects.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+In this demo we've used a simple API with only a handful of products, which therefore didn't require any API key. However, even with this limited amound of data, it's possible to play around with Redux and get a feel for it and its power.
 
-- Configure the top-level `parserOptions` property like this:
+All of this could be taken a step further by adding a database connection. In this simple demo, however, no such connection is available. Instead, clicking the Checkout button only clears the shopping cart content an re-routes the user to the home page.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+For styling, we used Tailwind that allows for higher flexibility than e.g. Bootstrap. You can find some custom configurations in the tailwind.config.ts file, which we set up for this demo.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Demo
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+👁️ [Live Demo](https://coffee-shop.iceeqsolutions.fi//)
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Built with
+
+- Vite
+- TypeScript
+- React
+- Redux
+- Tailwind
+- API data
+- Prettier
+
+## Features
+
+- React components
+- TS interfaces
+- Routing
+- Redux configuration
+- Tailwind custom config
+
+<br/><br/>
+
+<p align="center"><a href="https://iceeqsolutions.fi/"><img height="61px" width="300px" src="./src/assets/images/iCS_Logo_Light.png"></a></p>
+<br/><br/>
